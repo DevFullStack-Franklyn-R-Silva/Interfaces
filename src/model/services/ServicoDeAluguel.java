@@ -8,12 +8,12 @@ public class ServicoDeAluguel {
 	private Double precoPorDia;
 	private Double precoPorHora;
 
-	private ServicoDeImpostoDoBrasil servicoDeImposto;
+	private ServicoDeImposto servicoDeImposto;
 
 	public ServicoDeAluguel() {
 	}
 
-	public ServicoDeAluguel(Double precoPorDia, Double precoPorHora, ServicoDeImpostoDoBrasil servicoDeImposto) {
+	public ServicoDeAluguel(Double precoPorDia, Double precoPorHora, ServicoDeImposto servicoDeImposto) {
 		this.precoPorDia = precoPorDia;
 		this.precoPorHora = precoPorHora;
 		this.servicoDeImposto = servicoDeImposto;
@@ -35,11 +35,11 @@ public class ServicoDeAluguel {
 		this.precoPorHora = precoPorHora;
 	}
 
-	public ServicoDeImpostoDoBrasil getServicoDeImposto() {
+	public ServicoDeImposto getServicoDeImposto() {
 		return servicoDeImposto;
 	}
 
-	public void setServicoDeImposto(ServicoDeImpostoDoBrasil servicoDeImposto) {
+	public void setServicoDeImposto(ServicoDeImposto servicoDeImposto) {
 		this.servicoDeImposto = servicoDeImposto;
 	}
 
@@ -56,7 +56,7 @@ public class ServicoDeAluguel {
 		}
 		double imposto = servicoDeImposto.imposto(pagamentoBasico);
 		
-		locadora.setNota(new NotaDePagamento(pagamentoBasico, imposto));
+		locadora.setNota(new NotaDePagamento(pagamentoBasico, imposto)); 
 
 	}
 
